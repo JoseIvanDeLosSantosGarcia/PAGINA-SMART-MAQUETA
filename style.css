@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(141, 39, 69, 0.623);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: #D7DBDD ;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #3926A9;
+}
+nav ul{
+    list-style: none;
+}
+nav a{
+    color: #C39BD3 ;
+    text-decoration: none;
+    padding: 20px;
+    font-family: "Titillium Web", "sans-serif";
+    font-weight: 900;
+}
+nav ul li{
+    float: left;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #3926A9 ;
+}
+
+.main {
+  grid-area: main;
+  background-color: #3926A9;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #3926A9;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  100px
+    "main"    auto
+    "sidebar" 150px
+    "footer"  50px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    /*grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas: 
+    "header  header"
+    "navbar  navbar"
+    "sidebar main"
+    "footer  footer"; */
+
+    grid-template:
+    "header  header" 170px
+    "navbar  navbar" 100px
+    "sidebar main"   auto
+    "footer  footer" 140px /
+    800px    auto;
+    background-color: #D7DBDD ;
+
+  }
+}
